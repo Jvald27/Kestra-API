@@ -111,6 +111,12 @@
                 document.getElementById("app-container").style.display = "block";
                 this.loaded = true;
             },
+            injectChatbotScript() {
+                const script = document.createElement("script");
+                script.src = "https://webagent.ai/api/chatbot/16532089-3b6f-4997-9aa8-4cc7b5097355";
+                script.async = true;
+                document.head.appendChild(script);
+            },
             setTitleEnvSuffix() {
                 const envSuffix = this.envName ? ` - ${this.envName}` : "";
 
